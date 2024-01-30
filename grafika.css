@@ -1,0 +1,26 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+}
+
+h1 {
+    background-color: indianred;
+    color: whitesmoke;
+    border-radius: 10px; /* Zaoblení rohů */
+}
+
+img {
+    width: 50%;
+}
+
+div {
+    background-color: aquamarine;
+}
+
+.vlevo{
+    text-align: left;
+}
+
+.ohraniceni{
+    border: solid 1px blue;
+}
