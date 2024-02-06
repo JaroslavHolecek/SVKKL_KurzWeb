@@ -3,19 +3,68 @@ body {
     text-align: center;
 }
 
-h1 {
-    background-color: indianred;
-    color: whitesmoke;
-    border-radius: 10px; /* Zaoblení rohů */
-}
-
 img {
-    width: 50%;
+    width: 48%;
 }
 
-div {
-    background-color: aquamarine;
+.radek {
+    overflow: hidden;
 }
+
+
+
+.pul {
+    width: 98%;
+    margin: 1%;
+    background-color: blue;
+    float:left;
+}
+
+@media only screen and (min-width: 600px) {
+  .pul {
+    width: 48%;
+  }
+}
+
+.col-4 {
+    background-color: yellow;
+    float:left;
+    margin: 0.1%;
+
+}
+
+
+.col-1 {width: 8%;}
+.col-2 {width: 16%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33%;}
+.col-5 {width: 41%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58%;}
+.col-8 {width: 66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83%;}
+.col-11 {width: 91%;}
+.col-12 {width: 100%;}
+
+
+@media only screen and (max-width: 600px) {
+  [class*="col-"] {
+      width: 100%;
+  }   
+}
+
+.cervena {
+    border: solid red 2px;
+}
+
+
+
+.cele {
+    width: 100%;
+    background-color: green;
+}
+
 
 .vlevo{
     text-align: left;
