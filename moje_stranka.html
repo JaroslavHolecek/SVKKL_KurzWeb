@@ -23,9 +23,11 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/August_2010_CME_SDO_Multi-Wavelength.jpg" />
             <p>Dlouhý text, který se nevejde na jednu řádku</p>
         </div>
+
+        <p>Text mezi</p>
         
 
-        <div class="pul cervena">
+        <div class="pul">
             <h1> Druhý půl </h1>
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/August_2010_CME_SDO_Multi-Wavelength.jpg" />
             <p>Dlouhý text, který se nevejde na jednu řádku</p>
@@ -78,17 +80,49 @@
 
     <!-- Obrázek jako odkaz -->
     <a href="http://panteri-kladno.wz.cz/">
-        <img src="obrazky/Logo_kulate.png" /><br>
+        <img id="obrazek_ke_zmene" src="obrazky/Logo_kulate.png" /><br>
     </a>
 
     <!-- Text jako odkaz -->
-    <a href="https://www.svkkl.cz/">
+    <a id="ke_zmene" href="https://www.svkkl.cz/">
         Odkaz na stránku knihovny
     </a>
 
-    
-    
+    <button id="tlacitko">Změnit text</button>
 
-    
+    <div id="menu">
+        <button id="menuButton">Menu</button>
+        <ul id="menuItems">
+            <li><a href="#">Odkaz 1</a></li>
+            <li><a href="#">Odkaz 2</a></li>
+            <li><a href="#">Odkaz 3</a></li>
+        </ul>
+    </div>
+
+
+
 </body>
+
+<script>
+
+    document.getElementById("tlacitko").addEventListener("click", function() {
+
+        document.getElementById("ke_zmene").textContent = "Nový odkaz";
+        document.getElementById("ke_zmene").href = "https://www.seznamzpravy.cz/";
+
+        document.getElementById("obrazek_ke_zmene").src = "https://upload.wikimedia.org/wikipedia/commons/c/c3/August_2010_CME_SDO_Multi-Wavelength.jpg";
+
+    });
+
+    document.getElementById("menuButton").addEventListener("click", function() {
+    var menu = document.getElementById("menuItems");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+});
+    
+</script>
+
 </html>

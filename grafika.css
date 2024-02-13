@@ -11,8 +11,6 @@ img {
     overflow: hidden;
 }
 
-
-
 .pul {
     width: 98%;
     margin: 1%;
@@ -20,9 +18,18 @@ img {
     float:left;
 }
 
+/* h1 uvnitř třídy pul  */
+.pul h1{
+    color: whitesmoke;
+}
+
+.pul:hover {
+    background-color: darkblue;
+}
+
 @media only screen and (min-width: 600px) {
   .pul {
-    width: 48%;
+    width: 48%
   }
 }
 
@@ -30,7 +37,6 @@ img {
     background-color: yellow;
     float:left;
     margin: 0.1%;
-
 }
 
 
@@ -54,17 +60,10 @@ img {
   }   
 }
 
-.cervena {
-    border: solid red 2px;
-}
-
-
-
 .cele {
     width: 100%;
     background-color: green;
 }
-
 
 .vlevo{
     text-align: left;
@@ -72,4 +71,10 @@ img {
 
 .ohraniceni{
     border: solid 1px blue;
+}
+
+
+
+h1 {
+    color: darkred;
 }
