@@ -99,14 +99,45 @@
         </ul>
     </div>
 
+    <button id="tlacitkoPridejUcastnika">Přidej účastníka</button>
+    <form> <input type="text" id="jmeno_ucastnika"> </form>
+    <ul id="seznam_ucastniku">
+        
+    </ul>
 
 
 </body>
 
 <script>
+    var seznam_jmen = ["Adam", "Bára", "Cyril", "Dáša"];
+    var seznam_na_strance = document.getElementById("seznam_ucastniku");
 
-    document.getElementById("tlacitko").addEventListener("click", function() {
+    /* Zobrazuje aktuální seznam */
+    function aktualizujSeznam(){
+        seznam_na_strance.innerHTML = "";
 
+        for(jmeno of seznam_jmen) {
+            var bod_seznamu = document.createElement("li");
+            bod_seznamu.textContent = jmeno;
+            seznam_na_strance.appendChild(bod_seznamu);
+        }
+    }
+
+    aktualizujSeznam();    
+
+    /* Přidává jména do seznamu */
+    document.getElementById("tlacitkoPridejUcastnika").addEventListener("click", function()
+    {
+        var jmeno = document.getElementById('jmeno_ucastnika').value;
+        seznam_jmen.push(jmeno);
+
+        aktualizujSeznam();
+    });
+
+
+    /* Mění vlastnosti prvků - odkazu a obrázku */
+    document.getElementById("tlacitko").addEventListener("click", function()
+    {
         document.getElementById("ke_zmene").textContent = "Nový odkaz";
         document.getElementById("ke_zmene").href = "https://www.seznamzpravy.cz/";
 
@@ -114,14 +145,18 @@
 
     });
 
-    document.getElementById("menuButton").addEventListener("click", function() {
-    var menu = document.getElementById("menuItems");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-});
+    /* Schovat menu (seznam odkazů) */
+    document.getElementById("menuButton").addEventListener("click", function() 
+    {
+        var menu = document.getElementById("menuItems");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    });
+
+
     
 </script>
 
