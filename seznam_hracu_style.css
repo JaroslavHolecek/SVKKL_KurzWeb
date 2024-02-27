@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.player-list {
+    margin: 20px;
+}
+
+
+.player {
+    background-color: #f0f0f0; /* Světlý šedý */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px; /* Zaoblené rohy */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Mírný stín */
+    transition: background-color 0.3s ease; /* Plynulá změna barvy */
+}
+
+.player:hover {
+    background-color: #dcdcdc; /* Tmavší šedá při najetí */
+}
