@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <title>Seznam Hráčů</title>
     <link rel="stylesheet" href="seznam_hracu_style.css">
-    
 
 </head>
 <body>
-    <input type="file" id="fileInput" />
+    <input type="file" accept="application/json" id="fileInput" />
+    <button id="exportHracuDoSouboru" onclick="exportujHraceDoSouboru()">Ulož hráče do souboru</button>
+
+
+
+<form id="playerForm">
+    <label for="name">Jméno:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="surname">Příjmení:</label><br>
+    <input type="text" id="surname" name="surname"><br>
+    <label for="club">Klub:</label><br>
+    <input type="text" id="club" name="club"><br><br>
+    <button type="button" onclick="addPlayer()">Odeslat</button>
+</form>
+
+    
 
     <div class="player-list">
         <!-- Přidávání hráčů skrze JS -->
