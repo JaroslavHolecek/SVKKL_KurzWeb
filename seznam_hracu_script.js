@@ -22,9 +22,23 @@ function zobraz_vsechny_hrace(){ // Zajistí spuštění kódu až po načtení 
     playerListElement.innerHTML = "";
 
 
-    vsichniHraci.forEach(hrac => {
+    vsichniHraci.forEach(function(hrac, index) {
         const playerElement = document.createElement('div');
         playerElement.classList.add('player');
+        playerElement.setAttribute('data-index', index); // Přidání atributu s indexem
+        
+        playerElement.addEventListener('click', function(event) {
+            // Získání prvku, na který bylo kliknuto
+            var potvrzeni = confirm('Opravdu chcete smazat tohoto hráče?');
+            if (potvrzeni) {
+                var kliknutyHrac = event.target;
+                var index = kliknutyHrac.getAttribute('data-index');
+                vsichniHraci.splice(index, 1);
+                zobraz_vsechny_hrace(); /* Aktualizovat zobrazení */
+            }            
+        });
+
+        console.log(index);
 
         playerElement.innerHTML = `
             <p>Jméno: ${hrac.jmeno}</p>
